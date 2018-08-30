@@ -1,1 +1,47 @@
-/* TODO */
+
+body {
+    font-family: Comfortaa;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+.insta {
+    display: inline-block
+    width: auto;
+    height: auto;
+}
+
+.topnav {
+    background-color: darkslategray;
+    overflow: hidden;
+    display: inline-block
+}
+
+.top-logo {
+    float: left;
+    display: inline-block;
+    border-radius: 25%;
+    background-color: linear-gradient(#CCFFFF, #FFCCCC);
+}
+
+.topnav a {
+    float: left;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #DDD;
+    color: black;
+}
