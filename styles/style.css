@@ -1,47 +1,97 @@
 
 body {
-    font-family: Comfortaa;
-}
-
-ul {
-    list-style-type: none;
+    font-family: 'Comfortaa';
     margin: 0;
     padding: 0;
 }
 
-li {
-    display: inline-block;
-}
-
-.insta {
-    display: inline-block
-    width: auto;
-    height: auto;
-}
-
-.topnav {
-    background-color: darkslategray;
-    overflow: hidden;
-    display: inline-block
-}
-
-.top-logo {
-    float: left;
-    display: inline-block;
-    border-radius: 25%;
-    background-color: linear-gradient(#CCFFFF, #FFCCCC);
-}
-
-.topnav a {
-    float: left;
-    color: #F2F2F2;
-    text-align: center;
-    padding: 14px 16px;
+.teletop {
+    color: rgb(80, 80, 80);
+    border-top: solid black;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 40px;
+    position: fixed;
+    border-radius: 20px;
+    padding: 10px;
+    bottom: 30px;
+    right: 30px;
 }
 
-.topnav a:hover {
-    background-color: #DDD;
+.teletop::before {
+    content: "";
+    display: block;
+    background-color: rgb(80, 80, 80);
+    border-radius: 3px;
+    width: 100%;
+    height: 3px;
+}
+
+.logo {
+    float: left;
+    font-family: 'Parisienne';
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 30%;
+    text-align: center;
+    padding: 0 20px;
+    margin: 50px 100px;
+    line-height: 60px;
+    background: linear-gradient(35deg,#CCFFFF, #FFCCCC);
+}
+
+.navbar {
+    float: left;
+    padding: 36px;
+
+}
+
+.navbar a {
     color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.animate-hover {
+    display: inline-block;
+    list-style-type: none;
+    padding: 20px;
+}
+
+.animate-hover::after {
+    content: "";
+    display: block;
+    background-color: #FFCCCC;
+    height: 2px;
+    width: 0;
+    transition: width .2s;
+}
+
+.animate-hover:hover::after {
+    width: 100%;
+}
+            
+.insta {
+    float: right;
+    padding: 56px 56px 0 0;
+}
+            
+.insta img {
+    width: 48px;
+    height: 48px;
+}
+
+.hook {
+    text-align: center;
+    font-size: 100px;
+    padding: 50px 100px;
+    padding-top: 200px;
+}
+
+.aboutsec {
+    padding: 50px 100px;
+}
+
+.aboutsec h1 {
+    text-align: center;
 }
