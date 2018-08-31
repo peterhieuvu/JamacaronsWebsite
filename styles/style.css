@@ -26,6 +26,13 @@ body {
     height: 3px;
 }
 
+.top-bar {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 180px;
+}
+
 .logo {
     float: left;
     font-family: 'Parisienne';
@@ -90,11 +97,23 @@ body {
     text-align: center;
     font-size: 100px;
     padding: 50px 100px;
-    padding-top: 200px;
+    background-color: #FFCCCC;
+    box-shadow: 0 0 5px 2px gray;
+    margin: 50px;
 }
 
-.about-wrapper, .flavor-wrapper {
+.about-wrapper {
+    background-color: #CCFFFF;
+    box-shadow: 0 0 5px 2px gray;
     padding: 50px 100px;
+    margin: 50px;
+}
+
+.flavor-wrapper {
+    background-color: #FFCCCC;
+    padding: 50px 100px;
+    box-shadow: 0 0 5px 2px gray;
+    margin: 50px;
 }
 
 .about-wrapper h1 {
