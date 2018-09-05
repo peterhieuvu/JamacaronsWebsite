@@ -27,29 +27,30 @@ body {
 }
 
 .top-bar {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 180px;
+    background-color: rgb(255, 231, 231);
+    box-shadow: 0 0 5px 2px #BBB;
+    width: auto;
+    margin: 24px 0;
+    height: 47px;
 }
 
 .logo {
     float: left;
     font-family: 'Parisienne';
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 500;
     border-radius: 30%;
     text-align: center;
     padding: 0 20px;
-    margin: 50px 100px;
-    line-height: 60px;
-    background: linear-gradient(35deg,#CCFFFF, #FFCCCC);
+    margin: -8px 100px;
+    line-height: 64px;
+    background: linear-gradient(35deg,rgb(237, 255, 255), rgb(196, 223, 255));
+    box-shadow: 0 0 5px 2px #BBB;
 }
 
 .navbar {
     float: left;
-    padding: 36px;
-
+    padding: 0 36px;
 }
 
 .navbar a {
@@ -59,61 +60,52 @@ body {
     font-size: 16px;
 }
 
-.animate-hover {
+.nav-link {
     display: inline-block;
     list-style-type: none;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-.animate-hover::after {
+.nav-link::after {
     content: "";
     display: block;
-    background-color: #FFCCCC;
+    background-color: white;
     height: 2px;
     width: 0;
     transition: width .2s;
 }
 
-.animate-hover:hover::after {
+.nav-link:hover::after {
     width: 100%;
 }
             
 .insta {
     float: right;
-    padding: 56px 56px 0 0;
+    padding: 8px 36px 0 0;
 }
             
 .insta img {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
 }
 
 .insta img:hover {
-    box-shadow: 0 0 15px 5px lightgoldenrodyellow;
+    box-shadow: 0 0 5px 0 lightgray;
 }
 
 .hook {
     text-align: center;
     font-size: 100px;
     padding: 50px 100px;
-    background-color: #FFCCCC;
-    box-shadow: 0 0 5px 2px gray;
-    margin: 50px;
 }
 
 .about-wrapper {
-    background-color: #CCFFFF;
-    box-shadow: 0 0 5px 2px gray;
     padding: 50px 100px;
-    margin: 50px;
 }
 
 .flavor-wrapper {
-    background-color: #FFCCCC;
     padding: 50px 100px;
-    box-shadow: 0 0 5px 2px gray;
-    margin: 50px;
 }
 
 .about-wrapper h1 {
