@@ -1,11 +1,4 @@
 
-/* DEPRECATED FILE IN FAVOR OF SCSS */
-
-body {
-    font-family: 'Comfortaa';
-    margin: 0;
-    padding: 0;
-}
 
 .teletop {
     color: rgb(80, 80, 80);
@@ -94,86 +87,4 @@ body {
 
 .insta img:hover {
     box-shadow: 0 0 5px 0 lightgray;
-}
-
-.hook {
-    text-align: center;
-    font-size: 100px;
-    padding: 50px 100px;
-}
-
-.about-wrapper {
-    padding: 50px 100px;
-}
-
-.flavor-wrapper {
-    padding: 50px 10vw;
-}
-
-.about-wrapper h1 {
-    text-align: center;
-}
-
-.flavor-wrapper h1 {
-    text-align: center;
-}
-
-hr {
-    height: 2px;
-    border: 1px solid rgb(202, 202, 202);
-    border-left: 0;
-    border-right: 0;
-}
-
-.footer {
-    padding: 0 16px;
-}
-
-.info-container, .contact-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-link {
-    padding: 12px 24px;
-}
-
-.footer img {
-    width: 32px;
-    height: 32px;
-    padding: 6px;
-}
-
-.footer ul {
-    text-align: center;
-}
-
-.footer a {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: center;
-}
-
-.footer li {
-    display: inline-block;
-    list-style-type: none;
-    padding: 20px;
-}
-
-/* Desktop Only */
-@media only screen and (min-width: 1080px) {
-    
-    .hook {
-        padding: 50px 100px;
-    }
-
-    .flavor-wrapper {
-        padding: 50px 20vw;
-    }
-
-
 }

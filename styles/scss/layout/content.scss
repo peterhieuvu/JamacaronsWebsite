@@ -1,0 +1,28 @@
+
+//Desktop Media Queries
+@import 'content-desktop.scss';
+
+//Flavors Section has own file since it's a bit complex kinda sorta maybe, might change later...
+@import 'flavors.scss';
+
+.hook {
+    text-align: center;
+    font-size: 100px;
+    padding: 50px 100px;
+}
+
+.about-wrapper {
+    padding: 50px 100px;
+}
+
+.flavor-wrapper {
+    padding: 50px 10vw;
+}
+
+.about-wrapper h1 {
+    text-align: center;
+}
+
+.flavor-wrapper h1 {
+    text-align: center;
+}
