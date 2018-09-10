@@ -1,0 +1,12 @@
+
+//Layout Variables
+$font-stack: 'Comfortaa', Verdana, Geneva, sans-serif;
+$color-primary: rgb(255, 231, 231);
+
+$std-shadow: 0 0 5px 2px #BBB;
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+}

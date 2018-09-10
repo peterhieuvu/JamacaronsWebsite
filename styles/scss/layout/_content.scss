@@ -1,9 +1,6 @@
 
-//Desktop Media Queries
-@import 'content-desktop.scss';
-
 //Flavors Section has own file since it's a bit complex kinda sorta maybe, might change later...
-@import 'flavors.scss';
+@import 'flavors';
 
 .hook {
     text-align: center;
@@ -26,3 +23,16 @@
 .flavor-wrapper h1 {
     text-align: center;
 }
+
+@mixin content-desktop() {
+
+    .hook {
+        padding: 50px 100px;
+    }
+    
+    .flavor-wrapper {
+        padding: 50px 20vw;
+    }
+
+}
+    
