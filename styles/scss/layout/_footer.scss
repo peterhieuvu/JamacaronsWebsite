@@ -16,6 +16,7 @@ hr {
 
 .contact-link {
     padding: 4px 12px;
+    //TODO: add animation
     &:hover .link-text {
         display: block;
     }
@@ -46,7 +47,7 @@ hr {
     display: none;
 }
 
-@mixin footer-desktop() {
+@mixin footer-desktop {
     
     .footer img:hover {
         box-shadow: 0 0 5px 0 lightgray;

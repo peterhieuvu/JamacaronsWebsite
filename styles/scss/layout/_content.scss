@@ -5,6 +5,7 @@
 .hook {
     text-align: center;
     font-size: 100px;
+    overflow: hidden;
     padding: 50px 100px;
 }
 
@@ -24,7 +25,7 @@
     text-align: center;
 }
 
-@mixin content-desktop() {
+@mixin content-desktop {
 
     .hook {
         padding: 50px 100px;
