@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <title>Jamacarons</title>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Parisienne" rel="stylesheet">
-        <link rel="stylesheet" href="styles/main.css" />
-    </head>
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+                <title>Jamacarons</title>
+        
+                <!--Styles-->
+                <link href="https://fonts.googleapis.com/css?family=Comfortaa|Parisienne" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="styles/main.css" />
+        
+                <!--Scripts-->
+                <!--Handles hover styles on touch devices-->
+                <!--Mobile Dropdown Toggle-->
+                <script type="text/javascript">
+                    window.onload = function() {
+                        var a = document.getElementById("ham-id");
+                        a.onclick = function () {
+                            var x = document.getElementById("nav-id");
+                            if (x.className === "navbar") x.className += " nav-sm";
+                            else x.className = "navbar";
+                            
+                            return false;
+                        }
+                    }
+                    </script>
+            </head>
 
     <body>
         
         <!-- Top Bar which holds logo, nav, and media links -->
         <header>
-        <div class="top-bar">
-            <div class="logo">JM</div>
-            
-            <nav>
-            <div class="navbar">
-                <ul>
-                    <li class="nav-link"><a href="index.html" title="Back to home">Home</a></li>
-                    <li class="nav-link"><a href="index.html#about" title="Find out more about me!">About</a></li>
-                    <li class="nav-link"><a href="index.html#flavors" title="See all the flavors!">Flavors</a></li>
-                    <li class="nav-link"><a href="/contact.html" title="Contact me or make an order!">Contact/Orders</a></li>
-                </ul>
+                <div class="top-bar">
+                    <div class="logo">JM</div>
+                    
+                    <nav><div class="navbar" id="nav-id">
+                        <a href="javascript:void(0);" class="ham" id="ham-id"><i class="fa fa-bars"></i>
+                            <div class="nav-wrapper">
+                                <div class="nav-link"><a href="#" title="Back to home">Home</a></div>
+                                <div class="nav-link"><a href="#about" title="Find out more about me!">About</a></div>
+                                <div class="nav-link"><a href="#flavors" title="See all the flavors!">Flavors</a></div>
+                                <div class="nav-link"><a href="contact.html" title="Contact me or make an order!">Contact/Orders</a></div>
+                            </div>
+                        </div></nav>
+                        
+                        <div class="insta">
+                            <a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+                </div>
             </div>
-            </nav>
-            
-            <div class="insta"><a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a></div>
-        </div>
         </header>
 
         <a href="#" class="to-top" title="Go to top"><i class="fa fa-arrow-up"></i></a>
@@ -63,6 +83,7 @@
                 </div>
             </footer>
 
+        <script type="text/javascript" src="scripts/hoverwatch.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             /* Commented out because this method is not supported by all browsers

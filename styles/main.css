@@ -15,10 +15,11 @@ body {
   box-shadow: 0 0 5px 0 #CCC;
   background-color: #d2e6e9;
   transition: .3s; }
-  .to-top:hover {
-    color: #ffe7e7;
-    box-shadow: 0 0 5px 1px #BBB;
-    background-color: #bde4ea; }
+
+body.hasHover .to-top:hover {
+  color: #ffe7e7;
+  box-shadow: 0 0 5px 1px #BBB;
+  background-color: #bde4ea; }
 
 .top-bar {
   background-color: #ffe7e7;
@@ -29,11 +30,22 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center; }
 
+.ham {
+  display: none;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 48px;
+  padding: 0 20px; }
+  .ham:hover {
+    background-color: #fff6f6; }
+
 .logo {
   font-family: 'Parisienne';
   font-size: 32px;
   font-weight: 500;
   border-radius: 30%;
+  align-self: flex-start;
   text-align: center;
   padding: 0 20px;
   margin: -8px 24px;
@@ -42,38 +54,61 @@ body {
   box-shadow: 0 0 5px 2px #BBB; }
 
 .navbar {
-  padding: 0;
   display: flex;
-  align-items: center; }
+  align-items: baseline; }
   .navbar a {
     color: black;
     text-align: center;
     text-decoration: none;
     font-size: 16px; }
 
+.nav-wrapper {
+  display: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+  z-index: 1; }
+
 .nav-link {
-  list-style-type: none;
-  padding: 0 20px; }
+  padding: 5px 0 0 20px; }
   .nav-link::after {
     content: "";
     display: block;
-    background-color: #ffe7e7;
-    height: 2px;
+    background-color: #daf5ff;
+    height: 3px;
+    border-radius: 25%;
     width: 0;
     margin: auto;
     transition: width .3s; }
-  .nav-link:hover::after {
-    width: 100%; }
 
-.insta {
-  flex-grow: 0;
-  display: none; }
-  .insta img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%; }
-    .insta img:hover {
-      box-shadow: 0 0 5px 0 lightgray; }
+body.hasHover .nav-link:hover::after {
+  width: 100%; }
+
+.insta img {
+  display: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; }
+  .insta img:hover {
+    box-shadow: 0 0 5px 0 lightgray; }
+
+@media only screen and (max-width: 600px) {
+  .nav-link {
+    display: none;
+    padding: 10px; }
+    .nav-link::after {
+      text-align: right;
+      margin-right: 0; }
+  .ham {
+    display: block; }
+  .navbar {
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end; }
+  .nav-sm .nav-wrapper {
+    background-color: #fff6f6;
+    box-shadow: -2px 2px 4px 0 #BBB; }
+  .nav-sm .nav-link {
+    display: block; } }
 
 .hook {
   text-align: center;
@@ -137,12 +172,12 @@ hr {
   .navbar {
     padding: 0 36px; }
   .nav-link {
-    padding: 0 20px; }
-    .nav-link::after {
-      background-color: white; }
+    padding: 5px 20px 0 20px; }
   .insta {
-    padding: 4px 16px 0 8px;
+    padding: 0px 16px 0 8px;
     display: block; }
+    .insta img {
+      display: block; }
   .hook {
     padding: 50px 100px; }
   .flavor-wrapper {

@@ -15,11 +15,12 @@ $logo-height: 64px;
     box-shadow: 0 0 5px 0 #CCC;
     background-color: #d2e6e9;
     transition: .3s;
-    &:hover {
-        color: $color-primary;
-        box-shadow: 0 0 5px 1px #BBB;
-        background-color: #bde4ea;
-    }
+}
+
+body.hasHover .to-top:hover {
+    color: $color-primary;
+    box-shadow: 0 0 5px 1px #BBB;
+    background-color: $color-secondary;
 }
 
 .top-bar {
@@ -32,11 +33,24 @@ $logo-height: 64px;
     align-items: center;
 }
 
+.ham {
+    display: none;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    line-height: $top-bar-height;
+    padding: 0 20px;
+    &:hover {
+        background-color: lighten($color-primary, 3%);
+    }
+}
+
 .logo {
     font-family: 'Parisienne';
     font-size: 32px;
     font-weight: 500;
     border-radius: 30%;
+    align-self: flex-start;
     text-align: center;
     padding: 0 20px;
     margin: (($top-bar-height - $logo-height) / 2) $nav-margin;
@@ -46,9 +60,8 @@ $logo-height: 64px;
 }
 
 .navbar {
-    padding: 0;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     a {
         color: black;
         text-align: center;
@@ -57,27 +70,34 @@ $logo-height: 64px;
     }
 }
 
+.nav-wrapper {
+    display: inherit;
+    align-items: inherit;
+    flex-direction: inherit;
+    z-index: 1;
+}
+
 .nav-link {
-    list-style-type: none;
-    padding: 0 20px;
+    padding: 5px 0 0 20px;
     &::after {
         content: "";
         display: block;
-        background-color: $color-primary;
-        height: 2px;
+        background-color: #daf5ff;
+        height: 3px;
+        border-radius: 25%;
         width: 0;
         margin: auto;
         transition: width .3s;
     }
-    &:hover::after {
-        width: 100%;
-    }
+}
+
+body.hasHover .nav-link:hover::after {
+    width: 100%;
 }
             
 .insta {
-    flex-grow: 0;
-    display: none;
     img {
+        display: none;
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -99,14 +119,42 @@ $logo-height: 64px;
     }
     
     .nav-link {
-        padding: 0 20px;
-        &::after {
-            background-color: white;
-        }
+        padding: 5px 20px 0 20px;
     }
     
     .insta {
-        padding: 4px 16px 0 8px;
+        padding: 0px 16px 0 8px;
         display: block;
+        img {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-link {
+        display: none;
+        padding: 10px;
+        &::after {
+            text-align: right;
+            margin-right: 0;
+        }
+    }
+    .ham {
+        display: block;
+    }
+    .navbar {
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav-sm {
+        .nav-wrapper {
+            background-color: lighten($color-primary, 3%);
+            box-shadow: -2px 2px 4px 0 #BBB;
+        }
+        .nav-link {
+            display: block;
+        }
     }
 }
