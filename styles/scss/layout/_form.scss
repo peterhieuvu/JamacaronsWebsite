@@ -4,7 +4,8 @@
     p {
         margin: 0;
     }
-    background-color: lightgoldenrodyellow;
-    padding: 0;
-    margin: 0;
+    background-color: lighten($color-secondary, 15%);
+    padding: 50px;
+    margin: 20px;
+    box-shadow: $std-shadow;
 }

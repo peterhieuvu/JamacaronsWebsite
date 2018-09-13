@@ -35,7 +35,10 @@ body.hasHover .to-top:hover {
   background-color: #f7fcfc;
   height: 96px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 0 0 5px 2px #BBB;
+  position: relative;
+  z-index: 10; }
 
 .ham {
   display: none;
@@ -207,8 +210,9 @@ hr {
     display: block; } }
 
 .form-container {
-  background-color: lightgoldenrodyellow;
-  padding: 0;
-  margin: 0; }
+  background-color: #f7fcfc;
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 0 0 5px 2px #BBB; }
   .form-container p {
     margin: 0; }

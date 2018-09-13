@@ -39,6 +39,9 @@ body.hasHover .to-top:hover {
     height: $nav-margin * 2 + $top-bar-height;
     display: flex;
     align-items: center;
+    box-shadow: $std-shadow;
+    position: relative;
+    z-index: 10;
 }
 
 .ham {
