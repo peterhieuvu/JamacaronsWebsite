@@ -29,7 +29,15 @@ body.hasHover .to-top:hover {
     margin: $nav-margin 0;
     height: $top-bar-height;
     display: grid;
+    width: 100%;
     grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.top-container {
+    background-color: lighten($color-secondary, 15%);
+    height: $nav-margin * 2 + $top-bar-height;
+    display: flex;
     align-items: center;
 }
 
@@ -47,7 +55,7 @@ body.hasHover .to-top:hover {
 
 .logo {
     font-family: 'Parisienne';
-    font-size: 32px;
+    font-size: $logo-height/2;
     font-weight: 500;
     border-radius: 30%;
     align-self: flex-start;

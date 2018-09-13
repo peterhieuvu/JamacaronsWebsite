@@ -3,16 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        
         <title>Jamacarons</title>
-
+        
         <!--Styles-->
         <link href="https://fonts.googleapis.com/css?family=Comfortaa|Parisienne" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/main.css" />
-
+        
         <!--Scripts-->
-        <!--Handles hover styles on touch devices-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*$(window).ready(updateHookHeight);
+            $(window).resize(updateHookHeight);
+
+            function updateHookHeight() {
+                var div = $('#hook-id');
+                var width = 2/3 * div.width();
+
+                div.css('height', width);
+            }*/
+        </script>
         <!--Mobile Dropdown Toggle-->
         <script type="text/javascript">
             window.onload = function() {
@@ -31,7 +42,8 @@
     <body>
         
         <!-- Top Bar which holds logo, nav, and media links -->
-        <header>
+    <header>
+        <div class="top-container">
             <div class="top-bar">
                 <div class="logo">JM</div>
                 
@@ -49,14 +61,15 @@
                         <a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
             </div>
         </div>
+        </div>
     </header>
     
     <a href="#" class="to-top" title="Go to top"><i class="fa fa-angle-up"></i></a>
     
     <!-- Everything Else -->
     <main>
-        <div class="hook">
-            HOOK HOOK HOOK HOOK HOOK HOOK HOOK HOOK JAMACARONS :) I LOVE HOOK HOOK HOOK HOOK HOOK HOOK HOOK HOOK
+        <div class="hook" id="hook-id">
+            <h1>Jamacarons</h1>
         </div>
         
         <div id="about" class="about-wrapper">
@@ -98,7 +111,6 @@
         </footer>
         
         <script type="text/javascript" src="scripts/hoverwatch.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             /* Commented out because this method is not supported by all browsers
             

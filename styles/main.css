@@ -27,7 +27,14 @@ body.hasHover .to-top:hover {
   margin: 24px 0;
   height: 48px;
   display: grid;
+  width: 100%;
   grid-template-columns: auto 1fr auto;
+  align-items: center; }
+
+.top-container {
+  background-color: #f7fcfc;
+  height: 96px;
+  display: flex;
   align-items: center; }
 
 .ham {
@@ -111,16 +118,26 @@ body.hasHover .nav-link:hover::after {
     display: block; } }
 
 .hook {
-  text-align: center;
-  font-size: 100px;
+  background-image: url("/images/hook-2.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: 'Parisienne';
+  font-size: 6vw;
   overflow: hidden;
-  padding: 50px 100px; }
+  padding: 100px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  box-shadow: 0 0 0 1px #bde4ea; }
 
 .about-wrapper {
-  padding: 50px 100px; }
+  padding: 30px 10vw; }
 
 .flavor-wrapper {
-  padding: 50px 10vw; }
+  padding: 30px 10vw; }
 
 .about-wrapper h1 {
   text-align: center; }
@@ -178,13 +195,20 @@ hr {
     display: block; }
     .insta img {
       display: block; }
-  .hook {
-    padding: 50px 100px; }
   .flavor-wrapper {
-    padding: 50px 20vw; }
+    padding: 50px 10vw; }
+  .about-wrapper {
+    padding: 50px 10vw; }
   .footer img:hover {
     box-shadow: 0 0 5px 0 lightgray; }
   .contact-link {
     padding: 12px 24px; }
   .link-text {
     display: block; } }
+
+.form-container {
+  background-color: lightgoldenrodyellow;
+  padding: 0;
+  margin: 0; }
+  .form-container p {
+    margin: 0; }

@@ -3,18 +3,28 @@
 @import 'flavors';
 
 .hook {
-    text-align: center;
-    font-size: 100px;
+    background-image: url("/images/hook-2.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: 'Parisienne';
+    font-size: 6vw;
     overflow: hidden;
-    padding: 50px 100px;
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    box-shadow: 0 0 0 1px $color-secondary;
 }
 
 .about-wrapper {
-    padding: 50px 100px;
+    padding: 30px 10vw;
 }
 
 .flavor-wrapper {
-    padding: 50px 10vw;
+    padding: 30px 10vw;
 }
 
 .about-wrapper h1 {
@@ -26,13 +36,13 @@
 }
 
 @mixin content-desktop {
-
-    .hook {
-        padding: 50px 100px;
-    }
     
     .flavor-wrapper {
-        padding: 50px 20vw;
+        padding: 50px 10vw;
+    }
+
+    .about-wrapper {
+        padding: 50px 10vw;
     }
 
 }
