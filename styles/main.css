@@ -185,6 +185,55 @@ hr {
 .link-text {
   display: none; }
 
+.form-container {
+  background-color: #f7fcfc;
+  padding: 50px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0 0 5px 2px #BBB;
+  border-radius: 10px;
+  width: 400px;
+  display: flex; }
+  .form-container p {
+    margin: 0; }
+
+.radio-container {
+  background-color: #fff6f6;
+  display: inline-flex;
+  border: 2px solid #ffe7e7;
+  border-radius: 5px;
+  margin: 10px 0; }
+
+.form-radio {
+  text-align: center;
+  display: inline-block; }
+  .form-radio label {
+    padding: 0px 10px; }
+  .form-radio input[type="radio"] {
+    position: absolute;
+    left: -9999px; }
+    .form-radio input[type="radio"]:checked + label {
+      background-color: #ffcece; }
+    .form-radio input[type="radio"]:focus + label {
+      box-shadow: 0 0 3px 2px #dcf1f4; }
+  .form-radio:hover {
+    background-color: #ffe7e7; }
+
+input, textarea, select, button {
+  display: block;
+  margin: 0;
+  box-sizing: border-box; }
+
+input, textarea {
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 5px 0;
+  width: 500px; }
+
+textarea {
+  resize: none; }
+
 @media only screen and (min-width: 1080px) {
   .logo {
     margin-left: 100px;
@@ -207,12 +256,6 @@ hr {
   .contact-link {
     padding: 12px 24px; }
   .link-text {
-    display: block; } }
-
-.form-container {
-  background-color: #f7fcfc;
-  padding: 50px;
-  margin: 20px;
-  box-shadow: 0 0 5px 2px #BBB; }
-  .form-container p {
-    margin: 0; }
+    display: block; }
+  .form-container {
+    width: 800px; } }

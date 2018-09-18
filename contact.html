@@ -53,7 +53,7 @@
             </div>
         </header>
 
-        <a href="#" class="to-top" title="Go to top"><i class="fa fa-arrow-up"></i></a>
+        <a href="#" class="to-top" title="Go to top"><i class="fa fa-angle-up"></i></a>
         
         <!-- Everything Else -->
         <main>
@@ -61,24 +61,24 @@
                 <form>
                     <h1>Contact Form</h1>
                     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong></p>
-                    <fieldset>
-                        <legend>Type:</legend>
-
+                    <br />
+                    <P>Form Type:</P>
+                    <div class="radio-container">
                         <div class="form-radio">
-                            <label for="order">Order</label>
                             <input type="radio" id="order" name="type" value="order" />
+                            <label for="order">Order</label>
                         </div>
 
                         <div class="form-radio">
-                            <label for="general">General</label>
                             <input type="radio" id="general" name="type" value="general" checked />
+                            <label for="general">General</label>
                         </div>
 
                         <div class="form-radio">
-                            <label for="technical">Technical</label>
                             <input type="radio" id="technical" name="type" value="technical" />
-                        </div/>
-                    </fieldset>
+                            <label for="technical">Technical</label>
+                        </div>
+                    </div>
 
                     <div>
                         <label for="name">
@@ -114,8 +114,11 @@
                         </label>
                         <textarea cols="30" rows="10" required placeholder="Enter your message here"></textarea>
                     </div>
-                    </div>
 
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                    
                 </form>
             </div>
 
