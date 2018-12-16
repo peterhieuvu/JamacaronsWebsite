@@ -151,16 +151,20 @@ body.hasHover .nav-link:hover::after {
             margin-right: 0;
         }
     }
+
     .ham {
         display: block;
     }
+
     .navbar {
         justify-content: flex-end;
         flex-direction: column;
         align-items: flex-end;
     }
+    
     .nav-sm {
         .nav-wrapper {
+            width: 100%;
             background-color: lighten($color-primary, 3%);
             box-shadow: -2px 2px 4px 0 #BBB;
         }

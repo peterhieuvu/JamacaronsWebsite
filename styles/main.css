@@ -115,6 +115,7 @@ body.hasHover .nav-link:hover::after {
     flex-direction: column;
     align-items: flex-end; }
   .nav-sm .nav-wrapper {
+    width: 100%;
     background-color: #fff6f6;
     box-shadow: -2px 2px 4px 0 #BBB; }
   .nav-sm .nav-link {
@@ -188,12 +189,11 @@ hr {
 .form-container {
   background-color: #f7fcfc;
   padding: 50px;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px;
   box-shadow: 0 0 5px 2px #BBB;
   border-radius: 10px;
-  width: 400px;
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
   .form-container p {
     margin: 0; }
 
@@ -202,7 +202,7 @@ hr {
   display: inline-flex;
   border: 2px solid #ffe7e7;
   border-radius: 5px;
-  margin: 10px 0; }
+  margin: 10px auto; }
 
 .form-radio {
   text-align: center;
@@ -214,8 +214,8 @@ hr {
     left: -9999px; }
     .form-radio input[type="radio"]:checked + label {
       background-color: #ffcece; }
-    .form-radio input[type="radio"]:focus + label {
-      box-shadow: 0 0 3px 2px #dcf1f4; }
+  .form-radio:focus {
+    box-shadow: 0 0 3px 2px #dcf1f4; }
   .form-radio:hover {
     background-color: #ffe7e7; }
 
@@ -229,7 +229,7 @@ input, textarea {
   border: 1px solid gray;
   padding: 5px;
   margin: 5px 0;
-  width: 500px; }
+  width: 100%; }
 
 textarea {
   resize: none; }
@@ -258,4 +258,6 @@ textarea {
   .link-text {
     display: block; }
   .form-container {
-    width: 800px; } }
+    margin: auto;
+    margin-top: 20px;
+    max-width: 800px; } }
