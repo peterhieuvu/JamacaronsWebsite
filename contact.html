@@ -21,9 +21,8 @@
         <header>
             <div class="top-container">
                 <div class="top-bar">
-                    <div class="logo">JM</div>
-                        
                     <nav><div class="navbar" id="nav-id">
+                        <div class="logo"></div>
                         <a href="javascript:void(0);" class="ham" id="ham-id"><i class="fa fa-bars"></i>
                             <div class="nav-wrapper">
                                 <div class="nav-link"><a href="index.html#" title="Back to home">Home</a></div>
@@ -156,16 +155,21 @@
                 return false;
             });
         </script>
-            <!--Handles hover styles on touch devices-->
-            <!--Mobile Dropdown Toggle-->
-        <script type="text/javascript">
+
+        <script>
+            //top bar
             window.onload = function() {
                 var a = document.getElementById("ham-id");
                 a.onclick = function () {
-                    var x = document.getElementById("nav-id");
-                    if (x.className === "navbar") x.className += " nav-sm";
-                    else x.className = "navbar";
-                        
+                    var nav = document.getElementById("nav-id");
+                    var wrapper = a.nextElementSibling;
+                    if (nav.className === "navbar") {
+                        nav.className += " nav-sm";
+                        wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                    } else {
+                        nav.className = "navbar";
+                        wrapper.style.maxHeight = 0;
+                    }
                     return false;
                 }
             }

@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="styles/main.css" />
         
         <!--Scripts-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             /*$(window).ready(updateHookHeight);
             $(window).resize(updateHookHeight);
@@ -24,19 +23,6 @@
                 div.css('height', width);
             }*/
         </script>
-        <!--Mobile Dropdown Toggle-->
-        <script type="text/javascript">
-            window.onload = function() {
-                var a = document.getElementById("ham-id");
-                a.onclick = function () {
-                    var x = document.getElementById("nav-id");
-                    if (x.className === "navbar") x.className += " nav-sm";
-                    else x.className = "navbar";
-                    
-                    return false;
-                }
-            }
-            </script>
     </head>
     
     <body>
@@ -44,10 +30,9 @@
         <!-- Top Bar which holds logo, nav, and media links -->
     <header>
         <div class="top-container">
-            <div class="top-bar">
-                <div class="logo">JM</div>
-                
+            <div class="top-bar">       
                 <nav><div class="navbar" id="nav-id">
+                    <div class="logo"></div>
                     <a href="javascript:void(0);" class="ham" id="ham-id"><i class="fa fa-bars"></i>
                     <div class="nav-wrapper">
                         <div class="nav-link"><a href="#" title="Back to home">Home</a></div>
@@ -57,10 +42,10 @@
                     </div>
                 </div></nav>
                     
-            <div class="insta">
-                <a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+                <div class="insta">
+                    <a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+                </div>
             </div>
-        </div>
         </div>
     </header>
     
@@ -95,56 +80,76 @@
                 </div>
             </div>
             
-        </main>
+    </main>
         
-        <footer>
-            <div id="footer" class="footer">
-                <hr />
-                <div class="info-container">
-                    <div class="contact-link">
-                        <a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" />
-                            <div class="link-text">@jamacarons</div></a>
-                        </div>
-                        <div class="contact-link"><a href="mailto:jamacarons@gmail.com" title="jamacarons@gmail.com"><img src="images/email.svg" />
-                            <div class="link-text">jamacarons@gmail.com</div></a>
-                        </div>
-                        <div class="contact-link"><a href="tel:2533263289" title="Call or text me!"><img src="images/telephone.svg" />
-                            <div class="link-text">253-326-3289</div></a>
-                        </div>
+    <footer>
+        <div id="footer" class="footer">
+            <hr />
+            <div class="info-container">
+                <div class="contact-link">
+                    <a href="https://www.instagram.com/jamacarons/" title="To my Instagram page" target="_blank"><img src="images/instagram.png" alt="Instagram" />
+                        <div class="link-text">@jamacarons</div></a>
                     </div>
-                    <div class="contact-link"><a href="contact.html" title="Go to contact page" >Contact/Orders Page</a></div>
-                    <p>Copyright &copy; 2018 Jamacarons</p>
+                    <div class="contact-link"><a href="mailto:jamacarons@gmail.com" title="jamacarons@gmail.com"><img src="images/email.svg" />
+                        <div class="link-text">jamacarons@gmail.com</div></a>
+                    </div>
+                    <div class="contact-link"><a href="tel:2533263289" title="Call or text me!"><img src="images/telephone.svg" />
+                        <div class="link-text">253-326-3289</div></a>
+                    </div>
                 </div>
-        </footer>
+                <div class="contact-link"><a href="contact.html" title="Go to contact page" >Contact/Orders Page</a></div>
+                <p>Copyright &copy; 2018 Jamacarons</p>
+            </div>
+    </footer>
         
-        <script type="text/javascript" src="scripts/hoverwatch.js"></script>
-        <script>
-            /* Commented out because this method is not supported by all browsers
+    <script type="text/javascript" src="scripts/hoverwatch.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /* Commented out because this method is not supported by all browsers
             
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
                     
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-            }); */
-            
-            //Cache selector
-            var $root = $('html, body');
-            
-            $('a[href^="#"]').click(function() {
-                var href = $.attr(this, 'href');
-                
-                $root.animate({
-                    scrollTop: $(href).offset().top
-                }, 500, function() {
-                    window.location.hash = href;
-                });
-                
-                return false;
             });
-            </script>
+        }); */
+            
+        //Cache selector
+        var $root = $('html, body');
+            
+        $('a[href^="#"]').click(function() {
+            var href = $.attr(this, 'href');
+                
+            $root.animate({
+                scrollTop: $(href).offset().top
+            }, 500, function() {
+                window.location.hash = href;
+            });
+                
+            return false;
+        });
+        </script>
+
+        <script>
+            //top bar
+            window.onload = function() {
+                var a = document.getElementById("ham-id");
+                a.onclick = function () {
+                    var nav = document.getElementById("nav-id");
+                    var wrapper = a.nextElementSibling;
+                    if (nav.className === "navbar") {
+                        nav.className += " nav-sm";
+                        wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                    } else {
+                        nav.className = "navbar";
+                        wrapper.style.maxHeight = 0;
+                    }
+                    return false;
+                }
+            }
+        </script>
     </body>
     </html>

@@ -28,7 +28,7 @@ body.hasHover .to-top:hover {
   height: 48px;
   display: grid;
   width: 100%;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center; }
 
 .top-container {
@@ -51,21 +51,19 @@ body.hasHover .to-top:hover {
     background-color: #fff6f6; }
 
 .logo {
-  font-family: 'Parisienne';
-  font-size: 32px;
-  font-weight: 500;
   border-radius: 30%;
-  align-self: flex-start;
-  text-align: center;
-  padding: 0 20px;
-  margin: -8px 24px;
-  line-height: 64px;
-  background: linear-gradient(35deg, #edffff, #c4dfff);
+  width: 64px;
+  height: 64px;
+  margin-left: 50px;
+  margin-right: 100px;
+  align-self: center;
+  background: linear-gradient(35deg, #bde4ea, #e4f4f6);
   box-shadow: 0 0 5px 2px #BBB; }
 
 .navbar {
   display: flex;
-  align-items: baseline; }
+  height: 48px;
+  align-items: center; }
   .navbar a {
     color: black;
     text-align: center;
@@ -75,8 +73,7 @@ body.hasHover .to-top:hover {
 .nav-wrapper {
   display: inherit;
   align-items: inherit;
-  flex-direction: inherit;
-  z-index: 1; }
+  flex-direction: inherit; }
 
 .nav-link {
   padding: 5px 0 0 20px; }
@@ -103,23 +100,34 @@ body.hasHover .nav-link:hover::after {
 
 @media only screen and (max-width: 600px) {
   .nav-link {
-    display: none;
     padding: 10px; }
     .nav-link::after {
       text-align: right;
       margin-right: 0; }
+  .nav-wrapper {
+    background-color: #fff6f6;
+    transition: .3s;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto; }
+  .logo {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 16px; }
   .ham {
     display: block; }
   .navbar {
     justify-content: flex-end;
     flex-direction: column;
-    align-items: flex-end; }
+    align-items: flex-end;
+    height: auto; }
   .nav-sm .nav-wrapper {
-    width: 100%;
-    background-color: #fff6f6;
-    box-shadow: -2px 2px 4px 0 #BBB; }
-  .nav-sm .nav-link {
-    display: block; } }
+    box-shadow: -2px 2px 4px 0 #BBB;
+    padding: 10px; } }
 
 .hook {
   background-image: url("/images/hook-2.jpg");
@@ -187,7 +195,7 @@ hr {
   display: none; }
 
 form {
-  padding: 17px 15px 5px 15px; }
+  padding: 20px 20px 15px 20px; }
 
 .form-container {
   background-color: #f7fcfc;
@@ -255,9 +263,6 @@ button {
     background-color: #aedee5; }
 
 @media only screen and (min-width: 1080px) {
-  .logo {
-    margin-left: 100px;
-    margin-right: 100px; }
   .navbar {
     padding: 0 36px; }
   .nav-link {

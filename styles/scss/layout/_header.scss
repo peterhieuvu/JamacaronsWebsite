@@ -30,7 +30,7 @@ body.hasHover .to-top:hover {
     height: $top-bar-height;
     display: grid;
     width: 100%;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto;
     align-items: center;
 }
 
@@ -57,22 +57,20 @@ body.hasHover .to-top:hover {
 }
 
 .logo {
-    font-family: 'Parisienne';
-    font-size: $logo-height/2;
-    font-weight: 500;
     border-radius: 30%;
-    align-self: flex-start;
-    text-align: center;
-    padding: 0 20px;
-    margin: (($top-bar-height - $logo-height) / 2) $nav-margin;
-    line-height: $logo-height;
-    background: linear-gradient(35deg,rgb(237, 255, 255), rgb(196, 223, 255));
+    width: $logo-height;
+    height: $logo-height;
+    margin-left: 50px;
+    margin-right: 100px;
+    align-self: center;
+    background: linear-gradient(35deg, $color-secondary, lighten($color-secondary, 10%));
     box-shadow: $std-shadow;
 }
 
 .navbar {
     display: flex;
-    align-items: baseline;
+    height: $top-bar-height;
+    align-items: center;
     a {
         color: black;
         text-align: center;
@@ -85,7 +83,6 @@ body.hasHover .to-top:hover {
     display: inherit;
     align-items: inherit;
     flex-direction: inherit;
-    z-index: 1;
 }
 
 .nav-link {
@@ -120,11 +117,6 @@ body.hasHover .nav-link:hover::after {
 
 @mixin header-desktop {
     
-    .logo {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-    
     .navbar {
         padding: 0 36px;
     }
@@ -144,32 +136,47 @@ body.hasHover .nav-link:hover::after {
 
 @media only screen and (max-width: 600px) {
     .nav-link {
-        display: none;
         padding: 10px;
         &::after {
             text-align: right;
             margin-right: 0;
         }
     }
-
+    
+    .nav-wrapper {
+        background-color: lighten($color-primary, 3%);
+        transition: .3s;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    
+    .logo {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: ($logo-height - $top-bar-height);
+    }
+    
     .ham {
         display: block;
     }
-
+    
     .navbar {
         justify-content: flex-end;
         flex-direction: column;
         align-items: flex-end;
+        height: auto;
     }
     
     .nav-sm {
         .nav-wrapper {
-            width: 100%;
-            background-color: lighten($color-primary, 3%);
             box-shadow: -2px 2px 4px 0 #BBB;
-        }
-        .nav-link {
-            display: block;
+            padding: 10px;
         }
     }
+
 }
