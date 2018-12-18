@@ -33,7 +33,11 @@
             <div class="top-bar">       
                 <nav><div class="navbar" id="nav-id">
                     <div class="logo"></div>
-                    <a href="javascript:void(0);" class="ham" id="ham-id"><i class="fa fa-bars"></i>
+                    <div class="ham" id="ham-id">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                     <div class="nav-wrapper">
                         <div class="nav-link"><a href="#" title="Back to home">Home</a></div>
                         <div class="nav-link"><a href="#about" title="Find out more about me!">About</a></div>
@@ -137,7 +141,7 @@
             //top bar
             window.onload = function() {
                 var a = document.getElementById("ham-id");
-                a.onclick = function () {
+                a.onclick = function() {
                     var nav = document.getElementById("nav-id");
                     var wrapper = a.nextElementSibling;
                     if (nav.className === "navbar") {
@@ -149,7 +153,19 @@
                     }
                     return false;
                 }
+                
             }
+            
+            $(document).click(function(event) { 
+                if(!$(event.target).closest('#nav-id').length) {
+                    var nav = document.getElementById("nav-id");
+                    if(nav.clasName !== "navbar") {
+                        nav.className = "navbar";
+                        document.getElementById("ham-id").nextElementSibling.style.maxHeight = 0;
+                    }
+                }        
+            });
+            //cliick to collapse
         </script>
     </body>
     </html>
