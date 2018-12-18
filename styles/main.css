@@ -62,13 +62,14 @@ body.hasHover .to-top:hover {
 
 .logo {
   border-radius: 30%;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   margin-left: 50px;
   margin-right: 100px;
-  align-self: center;
-  background: linear-gradient(35deg, #bde4ea, #e4f4f6);
-  box-shadow: 0 0 5px 2px #BBB; }
+  align-self: center; }
+  .logo img {
+    width: 80px;
+    height: 80px; }
 
 .navbar {
   display: flex;
@@ -127,7 +128,7 @@ body.hasHover .nav-link:hover::after {
     margin-right: auto;
     left: 0;
     right: 0;
-    bottom: 16px; }
+    top: 8px; }
   .ham {
     display: flex; }
   .navbar {
@@ -158,8 +159,7 @@ body.hasHover .nav-link:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
-  box-shadow: 0 0 0 1px #bde4ea; }
+  z-index: -1; }
 
 .about-wrapper {
   padding: 30px 10vw; }
@@ -230,15 +230,16 @@ form {
   display: inline-flex;
   border: 2px solid #ffe7e7;
   border-radius: 5px;
-  margin: 15px auto; }
+  margin: 15px auto;
+  flex-direction: row; }
 
 .form-radio {
   text-align: center;
   display: inline-block; }
   .form-radio label {
-    padding: 0px 10px;
+    padding: 5px 10px;
     display: block;
-    height: 100%; }
+    height: auto; }
   .form-radio input[type="radio"] {
     position: absolute;
     left: -9999px; }
@@ -277,6 +278,12 @@ button {
     background-color: #cceaef; }
   button:active {
     background-color: #aedee5; }
+
+@media only screen and (max-width: 480px) {
+  .radio-container {
+    flex-direction: column; }
+  .form-container h1 {
+    margin-bottom: 0; } }
 
 @media only screen and (min-width: 1080px) {
   .navbar {

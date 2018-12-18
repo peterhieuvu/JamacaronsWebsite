@@ -1,7 +1,7 @@
 
 $nav-margin: 24px;
 $top-bar-height: 48px;
-$logo-height: 64px;
+$logo-height: 80px;
 
 .to-top {
     color: white;
@@ -70,14 +70,18 @@ body.hasHover .to-top:hover {
 }
 
 .logo {
+    img {
+        width: $logo-height;
+        height: $logo-height;
+    }
     border-radius: 30%;
     width: $logo-height;
     height: $logo-height;
     margin-left: 50px;
     margin-right: 100px;
     align-self: center;
-    background: linear-gradient(35deg, $color-secondary, lighten($color-secondary, 10%));
-    box-shadow: $std-shadow;
+    //background: linear-gradient(35deg, $color-secondary, lighten($color-secondary, 10%));
+    //box-shadow: $std-shadow;
 }
 
 .navbar {
@@ -171,7 +175,7 @@ body.hasHover .nav-link:hover::after {
         margin-right: auto;
         left: 0;
         right: 0;
-        bottom: ($logo-height - $top-bar-height);
+        top: (2 * $nav-margin + $top-bar-height - $logo-height) / 2;
     }
     
     .ham {

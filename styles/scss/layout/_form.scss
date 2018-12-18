@@ -25,16 +25,16 @@ form {
     border: 2px solid $color-primary;
     border-radius: 5px;
     margin: 15px auto;
-    //TODO: Add something to explain what the technical form option means\
+    flex-direction: row;
 }
 
 .form-radio {
     text-align: center;
     
     label {
-        padding: 0px 10px;
+        padding: 5px 10px;
         display: block;
-        height: 100%;
+        height: auto;
     }
     input[type="radio"] {
         &:checked + label {
@@ -90,9 +90,22 @@ button {
     }
 }
 
+@media only screen and (max-width: 480px) {
+
+    .radio-container {
+        flex-direction: column;
+    }
+
+    .form-container h1 {
+        margin-bottom: 0;
+    }
+
+}
+
 @mixin form-desktop {
 
     button {
         width: auto;
     }
+
 }
