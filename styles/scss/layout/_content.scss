@@ -20,30 +20,19 @@
 }
 
 .about-wrapper {
-    padding: 30px 10vw;
-}
-
-.flavor-wrapper {
-    padding: 30px 10vw;
-}
-
-.about-wrapper h1 {
+    padding: 20px 20vw;
     text-align: center;
 }
 
-.flavor-wrapper h1 {
+.price-wrapper {
+    padding: 20px 0;
     text-align: center;
+    div {
+        padding: 5px;
+    }
 }
 
 @mixin content-desktop {
-    
-    .flavor-wrapper {
-        padding: 50px 10vw;
-    }
-
-    .about-wrapper {
-        padding: 50px 10vw;
-    }
-
+    @include flavor-desktop;
 }
     
