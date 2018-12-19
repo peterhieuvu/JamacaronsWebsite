@@ -232,6 +232,7 @@ body.hasHover .nav-link:hover::after {
     padding: 30px 5vw; } }
 
 .hook {
+  background-image: url("../images/hook-2.jpg");
   background-position: center;
   background-size: cover;
   color: white;
